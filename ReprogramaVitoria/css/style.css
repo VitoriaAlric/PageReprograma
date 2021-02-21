@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(248, 243, 239);
+}
+html{
+    scroll-behavior: smooth;
+ }
+span {
+    font-weight: 700;
+    color:  #7E459B;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.botao > a,
+.midias-sociais__container-link {
+    text-decoration: none;
+    color: #7E459B;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.botao {
+    margin-top: 8px;
+    background-color: white;
+    border: #7E459B solid 1px;
+    padding: 10px 25px 10px 25px;
+    border-radius: 50px;
+}
+
+.cabecalho {
+    text-align: center;
+    background-image: url('../imagem/imageteste2.png');
+    background-size: auto;
+    width: 100%;
+    height: 700px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho__titulo {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.cabecalho__texto {
+    font-size: 1.6rem;
+}
+
+.destaque {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.sobre-mim,
+.midias-sociais {
+    height: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.display-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobre-mim__titulo {
+    font-size: 3rem;
+    color: #C4C4C4;
+    margin-bottom: 55px;
+}
+.sobre-mim__habilidades-titulo{
+    color:#7E459B;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.sobre-mim__descricao, 
+.sobre-mim__habilidades {
+    width: 50%;
+    line-height: 1.5;
+    padding-left: 60px;
+  }
+
+.midias-sociais__container {
+    text-align: center;
+    width: 20%;
+    background-color: #7E459B;
+    margin-top: 200px;
+    padding: 15px;
+}
+.card-zoom {
+    transition: 0.5s;
+    transform: scale(1);
+    text-align: center;
+}
+
+.card-zoom:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: #7E459B;
+    box-shadow: 10px 10px 0px #b58dc9;
+    cursor: pointer;
+}
+
+.midias-sociais__container-img {
+    margin-bottom: 20px;
+}
+
+.midias-sociais__container-link,
+.midias-sociais__container-paragrafo {
+    color: white;
+}
+
+.midias-sociais__container-paragrafo {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+.rodape__paragrafo {
+    text-align: center;
+    color: #0e0505;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.imagemGato{
+    height:440px;
+    width: 450px;
+    margin-top: 130px;
+}
+
+/*button-style*/
+
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-cad {
+    min-width: 150px;
+    min-height: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #b58dc9;
+    background: linear-gradient(90deg, #b58dc9 0%, #b58dc9 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px #b58dc9;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+
+.button-cad::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(135px + 10px);
+    min-height: calc(40px + 12px);
+    box-shadow: 0 0 90px #7E459B;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+    opacity: 1;
+}
+
+button::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #7E459B;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+button:hover::after,
+button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 145px;
+        height: 140px;
+        opacity: 0;
+    }
+}
+
+
+/*fim do botão */
+
+/*navbar*/
+
+        nav {
+
+            width: 100%;
+
+            display: flex;
+
+            background-color: rosybrown;
+
+            padding:20px;
+
+            font-weight: bolder
+
+        }
+ /*footer*/
+ footer{
+    background-color: rosybrown;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    left: 0;
+    padding: 22px;
+    }       
+
+
